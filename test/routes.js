@@ -12,7 +12,7 @@ describe('Routing', function() {
     done();
   });
   
-  describe('Makes', function() {
+  describe('Makes routes', function() {
     it('should return an error when given an invalid make type', function(done) {
       var makeType = { type: 'so very wrong' };
       request(url)
@@ -27,7 +27,7 @@ describe('Routing', function() {
         });
     });
     
-    it('should return the correct response when given the coffee brew type', function(done) {
+    it('should return the correct response when given the coffee make type', function(done) {
       var makeType = { type: 'coffee' };
       request(url)
         .post('/api/v1/makes')
@@ -37,6 +37,34 @@ describe('Routing', function() {
             throw err;
           }
           res.body.should.have.property('message', 'Heating water for coffee!' );
+          done();
+        });
+    });
+    
+    it('should return the correct response when given the tea make type', function(done) {
+      var makeType = { type: 'tea' };
+      request(url)
+        .post('/api/v1/makes')
+        .send(makeType)
+        .end(function(err, res) {
+          if (err) {
+            throw err;
+          }
+          res.body.should.have.property('message', 'Heating water for tea!' );
+          done();
+        });
+    });
+
+    it('should return the correct response when given the water make type', function(done) {
+      var makeType = { type: 'water' };
+      request(url)
+        .post('/api/v1/makes')
+        .send(makeType)
+        .end(function(err, res) {
+          if (err) {
+            throw err;
+          }
+          res.body.should.have.property('message', 'Heating water!' );
           done();
         });
     });
