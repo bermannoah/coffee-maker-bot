@@ -1,18 +1,18 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+  Make = mongoose.model('Make');
 
 module.exports = function (app) {
   app.use('/', router);
 };
 
 router.get('/', function (req, res, next) {
-  Article.find(function (err, articles) {
+  Make.find(function (err, makes) {
     if (err) return next(err);
     res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
+      title: 'Coffee Maker Bot',
+      makes: makes
     });
   });
 });

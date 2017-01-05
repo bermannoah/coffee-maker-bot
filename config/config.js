@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'coffee-maker-bot'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8080,
     db: 'mongodb://localhost/coffee-maker-bot-development'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'coffee-maker-bot'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8080,
     db: 'mongodb://localhost/coffee-maker-bot-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'coffee-maker-bot'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8080,
     db: 'mongodb://localhost/coffee-maker-bot-production'
   }
 };
