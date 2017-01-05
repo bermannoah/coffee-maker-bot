@@ -1,8 +1,22 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
+  color: #000;
+  /* Add Unsplash images to background */
+  // background-image: url(https://source.unsplash.com/Znvbt6PQGD0);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-color: transparent;
+  // padding-top: 5em;
 }
 
 a {
   color: #00B7FF;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: bold;
 }
