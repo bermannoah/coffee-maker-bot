@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
   Make.find(function (err, makes) {
     if (err) return next(err);
     res.render('index', {
-      title: 'Coffee Maker Bot',
+      title: 'Coffee (Maker) Bot',
       makes: makes
     });
   });

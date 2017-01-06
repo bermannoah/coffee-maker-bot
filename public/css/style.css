@@ -1,6 +1,12 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px Helvetica, Arial, sans-serif;
+  color: #000;
+  /* Add Unsplash images to background - commented out for now */ }
 
 a {
   color: #00B7FF; }
+
+p {
+  font-size: 2rem;
+  font-weight: bold; }

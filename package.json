@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV=test mocha --recursive test",
+    "test": "./node_modules/.bin/wdio wdio.conf.js && mocha",
+    "features": "./node_modules/.bin/wdio wdio.conf.js",
+    "unit": "mocha",
     "test:coverage": "nyc npm test",
     "test:unit": "mocha --recursive test/middleware test/models test/routes",
     "test:integration": "mocha --recursive test/integration"
@@ -33,6 +35,7 @@
     "mocha": "^3.0.2",
     "nyc": "^10.0.0",
     "should": "^11.1.2",
-    "supertest": "^2.0.0"
+    "supertest": "^2.0.0",
+    "wdio-mocha-framework": "^0.5.8"
   }
 }
