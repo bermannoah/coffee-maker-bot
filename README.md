@@ -4,4 +4,4 @@ A light-weight system for having a Raspberry Pi respond to [Coffee Bot](https://
 
 ### Technical details:
 
-A Node/Express API and a view written in Jade. Tests with Mocha/Chai/Selenium.
+A Node/Express/MongoDB API plus a small frontend view component handled by Jade. Tests with Mocha/Chai/Selenium.
