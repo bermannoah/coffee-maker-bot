@@ -36,7 +36,7 @@ describe('Routing', function() {
           if (err) {
             throw err;
           }
-          res.body.should.have.property('message', 'Heating water for coffee!' );
+          res.body.should.have.property('message', 'Starting to brew coffee!' );
           done();
         });
     });

@@ -1,7 +1,9 @@
 var express = require('express'),
+var brewScript = require('python-shell');
   router = express.Router(),
   mongoose = require('mongoose'),
   Make = mongoose.model('Make');
+
 
 module.exports = function (app) {
   app.use('/api/v1', router);
@@ -24,7 +26,12 @@ router.route('/makes')
     make.type = req.body.type;
     
     if (make.type === "coffee") {
-      res.json({ message: 'Heating water for coffee!' });
+      res.json({ message: 'Starting to brew coffee!' });
+      // Uncomment for deployment
+      // brewScript.run('PATH_TO_PI_SCRIPT', function (err) {
+      //   if (err) throw err;
+      //   console.log('finished');
+      // });
     }
     else if (make.type === "tea") {
       res.json({ message: 'Heating water for tea!' });
