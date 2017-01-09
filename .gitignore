@@ -5,3 +5,4 @@ public/components
 geckodriver
 errorShots/
 selenium-server-standalone-3.0.1.jar
+npm-debug.log
