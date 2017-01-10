@@ -28,7 +28,7 @@ router.route('/makes')
 
     if (make.type === "coffee") {
       res.json({ message: 'Starting to brew coffee!' });
-      clri.exec(`sudo /home/noah/CoffeeMakerBot/Adafruit-Raspberry-Pi-Python-Code/Adafruit_PWM_Servo_Driver/Servo_Example.py`);
+      clri.exec(`sudo /home/noah/CoffeeMakerBot/coffee-maker-bot/coffee-maker-script/servo_controller.py`);
     }
     else if (make.type === "tea") {
       res.json({ message: 'Heating water for tea!' });
