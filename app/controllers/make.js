@@ -1,7 +1,6 @@
 const clri = require('clri');
 
 var express = require('express'),
-var brewScript = require('python-shell');
   router = express.Router(),
   mongoose = require('mongoose'),
   Make = mongoose.model('Make');
