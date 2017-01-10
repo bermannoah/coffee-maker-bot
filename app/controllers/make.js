@@ -31,13 +31,13 @@ router.route('/makes')
       clri.exec(`sudo /home/noah/CoffeeMakerBot/coffee-maker-bot/coffee-maker-script/servo_controller.py`);
     }
     else if (make.type === "tea") {
-      res.json({ message: 'Heating water for tea!' });
+      res.json({ text: 'Heating water for tea!' });
     }
     else if (make.type === "water") {
-      res.json({ message: 'Heating water!' });
+      res.json({ text: 'Heating water!' });
     }
     else {
-      res.json({ message: 'Not sure what you meant by that.' });
+      res.json({ text: 'Not sure what you meant by that.' });
     }
 
     make.save(function(err) {
