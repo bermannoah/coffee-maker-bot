@@ -1,3 +1,5 @@
+const clri = require('clri');
+
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
@@ -14,17 +16,18 @@ router.route('/makes')
       if (err)
         res.send(err);
         console.log(err);
-        
+
       res.json(makes);
     });
   })
-  
+
   .post(function(req, res) {
     var make = new Make();
     make.type = req.body.type;
-    
+
     if (make.type === "coffee") {
-      res.json({ message: 'Heating water for coffee!' });
+      res.json({ message: 'Starting to brew coffee!' });
+      clri.exec(`sudo /home/noah/CoffeeMakerBot/Adafruit-Raspberry-Pi-Python-Code/Adafruit_PWM_Servo_Driver/Servo_Example.py`);
     }
     else if (make.type === "tea") {
       res.json({ message: 'Heating water for tea!' });
@@ -35,9 +38,9 @@ router.route('/makes')
     else {
       res.json({ message: 'Not sure what you meant by that.' });
     }
-    
+
     make.save(function(err) {
       if (err)
         res.send(err);
     });
-  });
+});
