@@ -27,7 +27,7 @@ router.route('/makes')
     make.type = req.body.type;
 
     if (make.type === "coffee") {
-      res.json({ message: 'Starting to brew coffee!' });
+      res.json({ text: 'Starting to brew coffee!' });
       clri.exec(`sudo python ./coffee-maker-script/servo_controller.py`);
     }
     else if (make.type === "tea") {
