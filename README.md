@@ -36,6 +36,7 @@ Assuming you're running Raspbian, here's how to do it:
 `sudo apt-get upgrade`
 
 `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+
 `sudo apt-get install -y nodejs`
 
 Once you've done that, you'll need to install mongodb.
