@@ -5,9 +5,9 @@ var mongoose = require('mongoose');
 var awsIot = require('aws-iot-device-sdk');
 
 var thingShadows = awsIot.thingShadow({
-   keyPath: "/home/noah/aws-iot/coffee-maker-bot.private.key",
-  certPath: "/home/noah/aws-iot/coffee-maker-bot.cert.pem",
-    caPath: "/home/noah/aws-iot/root-CA.crt",
+   keyPath: "./home/noah/aws-iot/coffee-maker-bot.private.key",
+  certPath: "./home/noah/aws-iot/coffee-maker-bot.cert.pem",
+    caPath: "./home/noah/aws-iot/root-CA.crt",
   clientId: "coffee-maker-bot",
     region: "us-west-2"
 });
