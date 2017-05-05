@@ -31,7 +31,7 @@ router.route('/makes')
       clri.exec(`sudo ./coffee-maker-script/servo_controller.py`);
     }
     else if (make.type === "tea") {
-      res.json({ text: 'Heating water for tea!' });
+      res.json({ text: '!418 error: I am not a tea pot!' });
     }
     else if (make.type === "water") {
       res.json({ text: 'Heating water!' });
